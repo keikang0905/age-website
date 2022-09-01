@@ -2,14 +2,14 @@ on:
   push:
 
 jobs:
-
   call-workflow-master-Build:
-    #uses: ./.github/workflows/build-documentation.yml@master
-    #{owner}/{repo}/.github/workflows/{filename}@{ref}
     steps:
       - id: step1
         run: mkdir -p  /home/runner/work/age-website/age-website/docs 
 
+  call-workflow-master-Build:
+    #uses: ./.github/workflows/build-documentation.yml@master
+    #{owner}/{repo}/.github/workflows/{filename}@{ref}
     uses: keikang0905/age-website/.github/workflows/build-documentation.yml@master
     with:
       username: new-web

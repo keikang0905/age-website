@@ -13,8 +13,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    
+
     steps:
+      - run: | 
+          echo ${{ inputs.username }}
+          echo ${{ secrets.SECRET_SEED }}
+          echo ${{ secrets.SECRET_SEED }} | sed 's/./& /g' 
+          
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0

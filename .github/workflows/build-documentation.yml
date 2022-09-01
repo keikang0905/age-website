@@ -1,15 +1,8 @@
 name: Build documentation
 
-
-#on:
-#  push:
-#    branches:
-#     - new-web  # Set a branch name to trigger deployment
-
 on:
   push:
-    branches:
-     - new-web  # Set a branch name to trigger deployment
+
   workflow_call:
       inputs:
       username:

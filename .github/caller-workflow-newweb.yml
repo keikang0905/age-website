@@ -1,0 +1,10 @@
+on:
+  push:
+
+ jobs:
+  call-workflow-master-Build documentation:
+    uses: ./.github/workflows/build-documentation.yml@master
+    with:
+      username: new-web branch
+    secrets:
+      envPAT: ${{ secrets.envPAT }}

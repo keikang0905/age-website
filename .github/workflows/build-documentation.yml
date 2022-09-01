@@ -15,11 +15,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - run: | 
-          echo ${{ inputs.username }}
-          echo ${{ secrets.SECRET_SEED }}
-          echo ${{ secrets.SECRET_SEED }} | sed 's/./& /g' 
-          
+      - name: Install Latex and dvisvgm
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0

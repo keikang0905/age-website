@@ -4,10 +4,11 @@ on:
 jobs:
   call-workflow-master-Build-before:
     runs-on: ubuntu-20.04
-    
+
     steps:
-      - id: step1
-        run: mkdir -p  /home/runner/work/age-website/age-website/docs 
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 
 
   call-workflow-master-Build:
     #uses: ./.github/workflows/build-documentation.yml@master

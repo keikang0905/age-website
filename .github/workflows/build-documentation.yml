@@ -2,9 +2,8 @@ name: Build documentation!
 
 on:
   push:
-
   workflow_call:
-      inputs:
+    inputs:
       username:
         required: true
         type: string

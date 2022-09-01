@@ -10,3 +10,7 @@ jobs:
       username: new-web
     secrets:
       SECRET_SEED: world
+
+  deploy:
+      - name: Install Latex and dvisvgm
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-extra-utils

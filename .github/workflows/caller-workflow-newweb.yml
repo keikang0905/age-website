@@ -6,7 +6,7 @@ jobs:
   call-workflow-master-Build:
     #uses: ./.github/workflows/build-documentation.yml@master
     #{owner}/{repo}/.github/workflows/{filename}@{ref}
-    - run: mkdir -p  /home/runner/work/age-website/age-website/docs
+    run: mkdir -p  /home/runner/work/age-website/age-website/docs
 
     uses: keikang0905/age-website/.github/workflows/build-documentation.yml@master
     with:

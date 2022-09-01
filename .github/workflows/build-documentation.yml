@@ -8,7 +8,7 @@ on:
         required: true
         type: string
     secrets:
-      token:
+      SECRET_SEED:
         required: true
 jobs:
   deploy:

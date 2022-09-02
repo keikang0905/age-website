@@ -4,22 +4,20 @@ on:
   push:
   workflow_call:
     inputs:
-      username:
+      callername:
         required: true
         type: string
-    secrets:
-      SECRET_SEED:
-        required: true
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
 
     steps:
-    
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
+          
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
